@@ -68,16 +68,16 @@ public class Book {
         this.author = author;
     }
 
-    public boolean deleteMark(Mark mark) {
-        return marks.remove(mark);
+    public void deleteMark(Mark mark) {
+        marks.remove(mark);
     }
 
-    public boolean addMark(Mark mark) {
-        return marks.add(mark);
+    public void addMark(Mark mark) {
+        marks.add(mark);
     }
 
-    public Review deleteReview() {
-        return this.review = null;
+    public void deleteReview() {
+        this.review = null;
     }
 
     public void changeState() {

@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 public class BookController {
 
@@ -58,7 +59,7 @@ public class BookController {
         return review;
     }
 
-    @PutMapping(path = "/{id}/state", consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PutMapping(path = "/{id}/state")
     public Book updateStateByBookId(@PathVariable int id) throws Exception {
         return bookService.changeStateById(id);
     }
